@@ -1,4 +1,8 @@
 var tab = {
+	send : function(settings, fn) {
+		chrome.runtime.sendMessage(settings);
+	},
+
 	query : function(settings, fn) {
 		fn = fn || function(){};
 		chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {

@@ -21,5 +21,4 @@ path.storageKey = {
 
 path.redirect = function(url) {
     window.open(url, "_blank");
-
 }

@@ -31,31 +31,14 @@ message.create = {
 		chrome.notifications.create("", config);
 	},
 
-	basicButton : function() {
-		console.log("Buttons");
+	clickable : function(url) {
 		var button1 = {
 			title : "Dismiss",
 		};
-		var button2 = {
-			title : "Explore",
-		};
-		chrome.notifications.create("", {
-			type    : "basic",
-			title   : "Working!",
-			message : "Hello World!",
-			iconUrl : "icon.png",
-			buttons : [button1, button2],
-		});
-	},
-
-	clickable : function() {
-		var button1 = {
-			title : "Dismiss",
-		};
-		chrome.notifications.create("", {
+		chrome.notifications.create("clickable", {
 			type        : "basic",
 			title       : "Working!",
-			message     : "Hello World!",
+			message     : url || "",
 			iconUrl     : "icon.png",
 			buttons     : [button1],
 			isClickable : true,
@@ -66,5 +49,20 @@ message.create = {
 message.action = {
 	redirect : function(url) {
 		console.log(url);
+	},
+};
+
+message.click = {
+	body : function(id) {
+		if (id == "clickable") {
+			var url = sites.white.random();
+			path.redirect(url);
+		}
+	},
+
+	button : function(id) {
+		if (id == "dismiss") {
+			chrome.notifications.clear;
+		}
 	},
 };

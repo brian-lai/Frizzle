@@ -1,6 +1,10 @@
-chrome.runtime.sendMessage(
-	{type : "notification"}, function(response) {
+var message = {
+	type : "notification",
+	url  : path.url.get(),
+};
+
+tab.send(message, function(response) {
     console.log(response);
 });
 
-// message.create.basicButton();
+// message.create.clickable();
