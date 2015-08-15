@@ -17,8 +17,9 @@
       "matches" : ["<all_urls>"],
       "css"     : ["css/page.css"
                   ],
-      "js"      : ["messaging.js",
-	               "run.js"
+      "js"      : ["storage.js",
+                   "messaging.js",
+                   "run.js"
                   ]
 	}],
   "permissions": [
@@ -28,7 +29,8 @@
   ],
   "background" : {
     "persistent" : false,
-    "scripts"    : ["messaging.js",
+    "scripts"    : ["storage.js",
+                    "messaging.js",
                     "background.js"
                    ]
   }
