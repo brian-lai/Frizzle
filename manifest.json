@@ -18,6 +18,7 @@
       "css"     : ["css/page.css"
                   ],
       "js"      : ["storage.js",
+                   "tracking.js",
                    "messaging.js",
                    "run.js"
                   ]
