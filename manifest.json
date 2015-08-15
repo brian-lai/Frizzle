@@ -14,8 +14,7 @@
       "matches" : ["<all_urls>"],
       "css"     : ["css/page.css"
                   ],
-      "js"      : ["messaging.js",
-                  ]
+      "js"      : ["messaging.js"]
 	}],
   "permissions": [
     "activeTab",
