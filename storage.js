@@ -2,17 +2,17 @@ var storage = {
 	save : function(key, value) {
 		var obj = {};
 		obj[key] = value;
-		preload.storage.set(obj);
+		chrome.storage.local.set(obj);
 	},
 
 	get : function(key, fn) {
-		preload.storage.get(key, function(value) {
+		chrome.storage.local.get(key, function(value) {
 			fn(value);
 		});
 	},
 
 	clear : function(key) {
-		preload.storage.remove(key);
+		chrome.storage.local.remove(key);
 	},
 
 	increment : function(key, value) {
