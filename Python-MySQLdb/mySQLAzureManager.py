@@ -6,10 +6,10 @@ filenames = ['business.txt', 'health.txt', 'politics.txt', 'tech.txt']
 
 
 
-db = pymysql.connect(host='frizzledbinstance.cqc8vwkyuxtk.ap-southeast-1.rds.amazonaws.com',
-                     user = 'frizzle_admin',
-                     password='password',
-                     db='frizzle_db')
+db = pymysql.connect(host='us-cdbr-azure-west-c.cloudapp.net',
+                     user = 'bf97f690b2966b',
+                     password='c51c20e4',
+                     db='as_1fadd35133f200a')
 
 cur = db.cursor()
 
